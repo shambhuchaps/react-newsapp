@@ -27,7 +27,7 @@ export class News extends Component {
       page: 1,
       totalResults: 0
     }
-    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsMonkey`;
+    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsIndia`;
     console.log(process.env.REACT_APP_NEWS_API)
   }
 
@@ -80,7 +80,7 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h1 className='text-center' style={{ margin: "35px 0px" }}>NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines </h1>
+        <h1 className='text-center' style={{ margin: "35px 0px" }}>NewsIndia - Top {this.capitalizeFirstLetter(this.props.category)} Headlines </h1>
         {this.state.loading && <Spinner/>}
         <InfiniteScroll
           dataLength={this.state.articles.length}
